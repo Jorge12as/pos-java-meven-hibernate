@@ -16,12 +16,12 @@ public class AppTest {
 		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
 		UsuarioPessoa pessoa = new UsuarioPessoa();
 
-		pessoa.setIdade(54);
-		pessoa.setNome("JANDIRA MARIA");
-		pessoa.setSobreNome("DOS SANTOS");
+		pessoa.setIdade(66);
+		pessoa.setNome("FABIANA GUIMARAÊS");
+		pessoa.setSobreNome("DAS DORES");
 		pessoa.setLogin("pedrosa");
 		pessoa.setSenha("12345");
-		pessoa.setEmail("pedrosa.santos@gmail.com");
+		pessoa.setEmail("guimaraes.ce@gmail.com");
 
 		daoGeneric.salvar(pessoa);
 	}
