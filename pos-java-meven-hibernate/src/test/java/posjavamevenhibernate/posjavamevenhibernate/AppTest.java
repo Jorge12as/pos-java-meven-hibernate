@@ -106,4 +106,31 @@ public class AppTest {
 		}
 
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Test
+	public void testeQueryPorParameter() {
+		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
+		List<UsuarioPessoa> list = daoGeneric.getEntityManager().createQuery("from UsuarioPessoa where nome = :nome or "
+					+ "sobrenome = :sobrenome")
+				.setParameter("nome", "JORGE")
+				.setParameter("sobrenome", "DOS SANTOS")
+				.getResultList();
+				
+		for (UsuarioPessoa usuarioPessoa : list) {
+			System.out.println(usuarioPessoa);
+		}
+	}
+	
+	//METODO QUE RETORNA A SOMA DE TODAS AS IDADES DOS USUARIOS NO BASE
+	@Test
+	public void testSomaQueryIdade() {
+		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
+		
+		Long somaIdade = (Long) daoGeneric.getEntityManager().createQuery("select sum(u.idade) from UsuarioPessoa u")
+				.getSingleResult();
+		
+		System.out.println("A soma de todas as idades é ---> "+ somaIdade);
+		
+	}
 }

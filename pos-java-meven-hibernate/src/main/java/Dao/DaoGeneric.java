@@ -1,10 +1,8 @@
 package Dao;
 
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-
 import posjavamevenhibernate.posjavamevenhibernate.HibernatUltil;
 
 public class DaoGeneric<E> {
