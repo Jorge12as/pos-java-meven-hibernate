@@ -176,13 +176,13 @@ public class AppTest {
 	public void consultarTelefonesPorParamt() {
 		
 		DaoGeneric daoGeneric = new DaoGeneric();
-		UsuarioPessoa pessoa = (UsuarioPessoa) daoGeneric.pesquisarPoId(8L, UsuarioPessoa.class);
+		UsuarioPessoa pessoa = (UsuarioPessoa) daoGeneric.pesquisarPoId(1L, UsuarioPessoa.class);
 
 		for (TelefoneUser fone : pessoa.getTelefoneUsers()) {
-			System.out.println(fone.getId());
-			System.out.println(fone.getNumero());
-			System.out.println(fone.getTipo());
-			System.out.println(fone.getUsuarioPessa().getNome());
+			System.out.println("Id: " +fone.getUsuarioPessa().getId());
+			System.out.println("Numero: " +fone.getNumero());
+			System.out.println("Tipo: " +fone.getTipo());			
+			System.out.println("Nome: "+fone.getUsuarioPessa().getNome());
 			System.out.println("------------------------------------------------------");
 		}
 
