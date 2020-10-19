@@ -9,6 +9,7 @@
 	<persistence-unit name="pos-java-meven-hibernate">
 	
 		<class>Model.UsuarioPessoa</class>
+		<class>Model.TelefoneUser</class>
 		<properties>		
 			<property name="javax.persistence.jdbc.url"			
 			value="jdbc:mysql://localhost:3306/sistemavendas?useLegacyDatetimeCode=false&amp;
